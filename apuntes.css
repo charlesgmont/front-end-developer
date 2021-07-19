@@ -1,0 +1,111 @@
+/* 
+clase1: Internet: Interconnected y Network
+Red de computadoras conectadas en todo el mundo.
+
+Tim Berners-Lee Invento World Wide Web.
+Fundo el consorcio W3C para estandarizar el desarrollo de las tecnologías base Internet
+
+HTTP Hyper Text Transfer Protocol 😕/ (Permite la comunicación de datos entre dispositivos)
+URL Uniform Resource Locator: (Dirección de un sitio web)
+HTML Hyper Text Markup Language (Lenguaje para describir la estructura de una sitio web)
+En 1994 apareció CSS Cascade Style Sheets.
+
+DOM
+Document object model
+El navegador transforma las etiquetas en objetos que son entendibles para el navegador.
+
+CSSOM
+Este mismo agarra el código de css y lo transforma en un lenguaje entendible para el navegador
+
+RENDER TREE
+Este mismo es un árbol en el que el DOM y el CSSOM juntos para renderizar el proceso que creamos en el codigo.
+
+Como el navegador lee el código
+1- El navegador transforma el código en bytes
+2- teniendo el código en bytes este los transforma en caracteres y este se da cuenta leyendo el meta charset
+3- Tokens, este los transforma en elementos html y los ordena
+4- Transforma estos en Nodos y estos son los que entiende el.
+y clasifica los objetos y los contenidos
+5- El dom es el árbol de los elementos que se forma con todos estos pasos.
+
+HTML
+
+Anatomía de un elemento HTML: Atributos, anidamiento y elementos vacíos.
+
+Títulos: H1, H2, H3, H4, H5 y H6
+Todos los elementos de HTML tienen una etiqueta de apertura y otra de clausura que tiene un slash, que justamente
+indica su cierre. Atributos se componen del nombre del atributo, un símbolo = y el valor del atributo. Siempre van 
+adentro de la etiqueta de apertura.
+Anidamiento
+Se entiende el anidamiento a base de la identación de los elementos. Existen elementos que existen por definición 
+dentro de otros elementos, como por ejemplo ul que contiene elementos li. Una correcta anidación será clave para un 
+renderizado correcto de nuestra página web. Un elemento mal anidado podría tener como consecuencia que el componente 
+no se renderice por el render tree.
+Elementos vacíos
+Img que lleva como atributos src y alt
+El atributo alt será utilizado por lectores de pantalla para describir a los usuarios la imagen que deberían de ver si
+pudiesen ver. Este es un atributo que debe usarse si queremos hacer de nuestro sitio un sitio amigable con la diversidad.
+
+Errores sintácticos: Son errores de escritura en el código y evitan que el programa funcione. Pueden ser errores de tipado.
+
+Errores lógicos: En estos la sintaxis es correcta, pero el código no hace lo que debería. El programa funciona, pero de forma incorrecta.
+
+Anatomia CSS
+Nuestros estilos con CSS se componen de:
+
+Selector: son la referencia a los elementos HTML que queremos estilizar. Los nombres de estas etiquetas van seguidas 
+de una llave de apertura y otra de cierre ({}). Por ejemplo: h1 {}.
+Propiedades: son el tipo de estilo que queremos darle a nuestros elementos. Van seguidas de dos puntos (:). 
+Las propiedades deben estar dentro de las llaves del selector que definimos anteriormente. Podemos escribir diferentes 
+propiedades en un mismo selector. Por ejemplo: h1 { color: }.
+Valores: son el estilo que queremos que tomen nuestros elementos HTML con respecto a una propiedad. 
+Van seguidas de un punto y coma (;). Por ejemplo: h1 { color: red; }.
+h1 {
+  color: red;
+}
+
+Tipos de selectores
+*(asterisco): Es el selector universal. Las propiedades se aplicaran a todos los elementos de nuestro HTML.
+
+Tipo: Son selectores que se aplican a cierto elemento HTML en específico. Las propiedades se aplicaran a la etiqueta que queremos, por ejemplo p, body, html, div, etc.
+
+Clase: Si nuestras etiqueta de HTML tienen un atributo de class podemos usar ese valor o identificador para que los cambios en el CSS afecten únicamente a ese elemento.
+
+ID: Es similar al anterior, si la etiqueta HTML tiene un ID podemos afectar solo ese elemento.
+
+Las Pseudo-clases y Pseudo-elementos nos permiten ser aún más específicos con qué elemento o partes de nuestros elementos deben recibir los estilos.
+
+Para usarlas debemos definir el selector base (por ejemplo, p) seguido de dos puntos y la pseudo-clase que queremos estilizar (por ejemplo: p:first-child). En el caso de los pseudo-elementos debemos usar el dos puntos 2 veces (p::first-letter).
+
+ Asterisco (universal) 
+* {
+    margin: 0;
+  }
+  
+  /* Tipo 
+  h1 {
+    color: red;
+  }
+  
+  /* Clase 
+  .saludo {
+    font-size: 2em;
+  }
+  
+  /* ID 
+  #id {
+    border-radius: 20px;
+  }
+  
+  /* Pseudo-clases 
+  p:first-child {
+    color: white;
+  }
+  
+  p:last-child {
+    color: purple;
+  }
+  
+  p:nth-child(2n) {
+    color: red;
+  } *\
